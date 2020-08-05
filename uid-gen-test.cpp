@@ -7,10 +7,10 @@ TEST(UID, UID_is_generated_within_length_limit) {
   std::string uid = uidgen();
   ASSERT_TRUE(uid.length() >0);
 }
-TEST(UID, UID_is_generated_withi_Organization_Preffix) {
+TEST(UID, UID_is_generated_with_Organization_Preffix) {
   std::string uid = uidgen();
-  std::string OrgGeneratedPreffix = uid.substr(0,9);
-  std::string OrgPreffix = "1.4.444.90004";
+  std::string OrgGeneratedPreffix = uid.substr(0,13);
+  std::string OrgPreffix = "1.4.444.90004.223.";
   ASSERT_TRUE(strcmp(OrgGeneratedPreffix,OrgPreffix));
 }
 1.4.444.90004
